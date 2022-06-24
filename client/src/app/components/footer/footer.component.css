@@ -1,0 +1,10 @@
+.logo-wrapper {
+    flex: 0 0 180px;
+    max-width: 180px;
+    
+  }
+  .logo-wrapper a {
+    position:relative;
+    padding-left: 425%;
+    position: center;
+  }

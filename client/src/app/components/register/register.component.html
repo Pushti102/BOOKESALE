@@ -1,0 +1,92 @@
+<h1>Login or Create an Account</h1>
+<div class="create-account-page-wrapper">
+  <div class="container">
+    <div class="create-account-row">
+      <form (submit)="submit()" [formGroup]="registerForm">
+        <div class="form-block">
+          <div class="personal-information">
+            <div class="personal-information-header">
+              <h2>Personal Information</h2>
+              <p>
+                Please enter the following information to create your account.
+              </p>
+            </div>
+      
+            <div class="form-row-wrapper">
+              <div class="form-col">
+                <div class="form-group">
+                  <label for="first-name" id="first-name-label">First Name *</label>
+                  <input formControlName="firstname" type="text" class="form-control" id="first-name" />
+                  <span class="help-block" *ngIf="
+                  registerForm.controls['firstname'].invalid &&
+                  (registerForm.controls['firstname'].dirty ||
+                  registerForm.controls['firstname'].touched) &&
+                  registerForm.controls['firstname'].hasError('required')
+                ">Please enter valid username</span>
+                </div>
+              </div>
+              <div class="form-col">
+                <div class="form-group">
+                  <label for="last-name" id="last-name-label">Last Name *</label>
+                  <input formControlName="lastname" type="text" class="form-control" id="last-name" />
+                  <span class="help-block" *ngIf="
+                  registerForm.controls['lastname'].invalid &&
+                  (registerForm.controls['lastname'].dirty ||
+                  registerForm.controls['lastname'].touched) &&
+                  registerForm.controls['lastname'].hasError('required')
+                ">Please enter valid username</span>
+                </div>
+              </div>
+              <div class="form-col full-width">
+                <div class="form-group">
+                  <label for="email-address" id="email-address-label">Email Adress *</label>
+                  <input formControlName="email" type="text" class="form-control" id="email-address" />
+                  <span class="help-block" *ngIf="
+                  registerForm.controls['email'].invalid &&
+                  (registerForm.controls['email'].dirty ||
+                  registerForm.controls['email'].touched) &&
+                  registerForm.controls['email'].hasError('required')
+                ">Please enter valid Email Adress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-information">
+            <div class="personal-information-header">
+              <h2>Login Information</h2>
+            </div>
+            <div class="form-row-wrapper">
+              <div class="form-col">
+                <div class="form-group">
+                  <label for="password" id="password-label">Password *</label>
+                  <input formControlName="password" type="password" class="form-control" id="password" />
+                  <span class="help-block" *ngIf="
+                  registerForm.controls['password'].invalid &&
+                  (registerForm.controls['password'].dirty ||
+                  registerForm.controls['password'].touched) &&
+                  registerForm.controls['password'].hasError('required')
+                ">Please enter the Password</span>
+                </div>
+              </div>
+              <div class="form-col">
+                <div class="form-group">
+                  <label for="confirmpassword" id="confirm-password-label">Confirm Password *</label>
+                  <input formControlName="confirmpassword" type="password" class="form-control" id="confirmpassword" />
+                  <span class="help-block" *ngIf="
+                  registerForm.controls['confirmpassword'].invalid &&
+                  (registerForm.controls['confirmpassword'].dirty ||
+                  registerForm.controls['confirmpassword'].touched) &&
+                  registerForm.controls['confirmpassword'].hasError('required')
+                ">Please enter correct password</span>
+                </div>
+              </div>
+            </div>
+            <div class="btn-wrapper">
+              <input type="submit" name="Register" class="btn btn-success">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

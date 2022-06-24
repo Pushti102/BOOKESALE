@@ -1,0 +1,45 @@
+<div class="create-account-page-wrapper">
+    <div class="container">
+        <div class="create-account-row">
+            <form>
+                <div class="form-block">
+                    <div class="personal-information">
+                        <div class="personal-information-header">
+                            <h2>Registered customers</h2>
+                            <p>
+                                Please enter the following information to login.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-row-wrapper">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email-address" id="email-address-label">Email Adress *</label>
+                                <input type="text" class="form-control" id="email-address" />
+                                <span class="help-block" *ngIf="
+                                loginForm.controls['email'].invalid &&
+                                (loginForm.controls['email'].dirty ||
+                                loginForm.controls['email'].touched) &&
+                                loginForm.controls['email'].hasError('required')
+                              ">Please enter valid Email Adress</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-information">
+                    <div class="form-row-wrapper">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="password" id="password-label">Password *</label>
+                                <input type="password" class="form-control" id="password" />
+                                <span class="error-msg">Invalid</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button class="btn blue-btn" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

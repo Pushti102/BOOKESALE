@@ -1,0 +1,40 @@
+.breadcrumb-wrapper ol {
+    justify-content: center;
+    margin-bottom: 32px;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+  }
+  .breadcrumb-wrapper ol li a {
+    font-size: 18px;
+    color: #333;
+  }
+  .breadcrumb-wrapper ol li a:hover {
+    text-decoration: none;
+    color: #0b2e58;
+  }
+  .breadcrumb-wrapper ol li + li {
+    position: relative;
+    padding-left: 20px;
+  }
+  .breadcrumb-wrapper ol li + li::before {
+    position: absolute;
+    content: "";
+    background-image: url(../assets/breadcrumb-arrow.svg);
+    left: 6px;
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    height: 14px;
+    width: 14px;
+    top: 6px;
+    margin-top: 22px;
+  }
+  .breadcrumb-wrapper ol li p {
+    font-size: 18px;
+    color: #0b2e58;
+    margin-top: 18px;
+  }
+  
